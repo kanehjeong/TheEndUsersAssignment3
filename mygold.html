@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gold</title>
+    <link rel="stylesheet" href="resources/css/all.css">
+    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    
+    <style>
+        /* hide graph on mobile */
+        @media (max-width: 48em) {
+            #search,
+            #gear,
+            #graph {
+                display:none;
+            }
+            #topadditem {
+                display:block;
+                float:right;
+            }
+        }
+        /* hide on desktop */
+        @media (min-width: 48em) {
+            #topadditem {
+                display:none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pure-menu pure-menu-horizontal">
+        <a href="#" class="pure-menu-link"><i class="fa fa-refresh"></i></a>
+        <b>MyStackApp</b>
+        <a href="additem.html" id="topadditem"><i class="fa fa-plus"></i></a>
+        <a href="#" id="gear" class="pure-menu-link"><i class="fa fa-cog"></i></a>
+    </div>
+        
+    <div id="layout">
+        
+
+    
+        <div id="menu">
+            <div class="pure-menu">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="home.html" class="pure-menu-link"><i class="fa fa-home"></i><br>Home</a></li>
+                    <li class="pure-menu-item"><a href="mygold.html" class="pure-menu-link"><b>Au</b><br>My Gold</a></li>
+                    <li class="pure-menu-item"><a href="mysilver.html" class="pure-menu-link"><b>Ag</b><br>My Silver</a></li>
+                    <li class="pure-menu-item"><a href="myplatinum.html" class="pure-menu-link"><b>Pt</b><br>My Platinum</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    
+    
+    
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-2-5">
+                <b>$18,234.10</b> Daily +3.5% Overall +1.2%<br>
+                My Gold Value
+                
+                
+                <div id="gearMenu">
+                    <a href="#menu" id="menuLink" class="menu-link">
+                    <!-- Hamburger icon -->
+                    <span></span>
+                    </a>
+                </div>
+             
+                
+                <table class="pure-table stretch-table">
+                    <thead>
+                        <tr>
+                            <th>Current Spot</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1206.10<br>Bid</td>
+                            <td>1207.10<br>Ask</td>
+                            <td>+23.40<br>Change</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="graph" class="pure-u-1 pure-u-md-3-5">
+                GRAPH HERE! graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph 
+            </div>
+            
+            
+            <div class="pure-u-1">
+            
+                <div>
+                    <p style="float:left">My Stack</p>
+                   
+                    <div id="search" style="float:right;">
+                        <form class="pure-form">
+                            <input type="text" class="pure-input-rounded">
+                            <button type="submit" class="pure-button">Search</button> 
+                            <a href="additem.html"><i class="fa fa-plus"></i></a>
+                        </form>
+                    </div>
+                </div>
+                
+                <table class="pure-table stretch-table">
+                    <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Item</th>
+                            <th>Qty.</th>
+                            <th>Weight/Unit (g)</th>
+                            <th>% au</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="itemdetail.html">[img]</a></td>
+                            <td>US Eagle</td>
+                            <td>1</td>
+                            <td>1.244</td>
+                            <td>.917</td>
+                            <td>1199.10</td>
+                        </tr>
+                        <tr>
+                            <td><a href="itemdetail.html">[img]</a></td>
+                            <td>US Eagle</td>
+                            <td>5</td>
+                            <td>1.244</td>
+                            <td>.917</td>
+                            <td>5995.50</td>
+                        </tr>
+                        <tr>
+                            <td><a href="itemdetail.html">[img]</a></td>
+                            <td>US Eagle</td>
+                            <td>5</td>
+                            <td>1.244</td>
+                            <td>.917</td>
+                            <td>5885.50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+            
+   
+   
+   <!-- script for left menu -->
+   <script>
+       (function (window, document) {
+
+            var layout   = document.getElementById('layout'),
+                menu     = document.getElementById('menu'),
+                menuLink = document.getElementById('menuLink');
+
+            function toggleClass(element, className) {
+                var classes = element.className.split(/\s+/),
+                    length = classes.length,
+                    i = 0;
+
+                for(; i < length; i++) {
+                  if (classes[i] === className) {
+                    classes.splice(i, 1);
+                    break;
+                  }
+                }
+                // The className is not found
+                if (length === classes.length) {
+                    classes.push(className);
+                }
+
+                element.className = classes.join(' ');
+            }
+
+            menuLink.onclick = function (e) {
+                var active = 'active';
+
+                e.preventDefault();
+                toggleClass(layout, active);
+                toggleClass(menu, active);
+                toggleClass(menuLink, active);
+            };
+
+        }(this, this.document));
+    </script>
+ 
+   
+</body>
+
+</html>

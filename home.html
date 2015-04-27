@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link rel="stylesheet" href="resources/css/all.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <style>
+        /* hide graph on mobile */
+        @media (max-width: 48em) {
+            #graph {
+                display:none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="pure-menu pure-menu-horizontal">
+        <a href="#" class="pure-menu-link"><i class="fa fa-refresh"></i></a>
+        <b>MyStackApp</b>
+        <a href="#" onclick="switchVisible('gearMenu');" class="pure-menu-link"><i class="fa fa-cog"></i></a>
+    </div>
+        
+    <div id="layout">
+        
+
+    
+        <div id="menu">
+            <div class="pure-menu">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="home.html" class="pure-menu-link"><i class="fa fa-home"></i><br>Home</a></li>
+                    <li class="pure-menu-item"><a href="mygold.html" class="pure-menu-link"><b>Au</b><br>My Gold</a></li>
+                    <li class="pure-menu-item"><a href="mysilver.html" class="pure-menu-link"><b>Ag</b><br>My Silver</a></li>
+                    <li class="pure-menu-item"><a href="myplatinum.html" class="pure-menu-link"><b>Pt</b><br>My Platinum</a></li>
+                </ul>
+            </div>
+        </div>
+    
+    
+    
+    
+        <div class="pure-g">
+            <div class="pure-u-1 pure-u-md-2-5">
+                <b>$24,495.23</b> +3.5%<br>
+                My Total Stack Value
+                
+                
+                <div id="gearMenu">
+                    <a href="#menu" id="menuLink" class="menu-link">
+                    <!-- Hamburger icon -->
+                    <span></span>
+                    </a>
+                    <a href="#graph" onclick="switchVisible('graph');" id="graphLink" class="menu-link">
+                    <i class="fa fa-bar-chart"></i>
+                    </a>
+                </div>
+                
+                
+                <div>
+                    <p style="float:left;">Market is <b>open</b></p>
+                    <p style="float:right; font-style: italic;">closes in 3h 35min</p>
+                </div>
+               
+             
+                
+                <table class="pure-table stretch-table">
+                    <thead>
+                        <tr>
+                            <th>Gold</th>
+                            <th></th>
+                            <th><a href="#"><i class="fa fa-caret-right"></i></a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1206.10<br>Bid</td>
+                            <td>1207.10<br>Ask</td>
+                            <td>+23.40<br>Change</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="pure-table stretch-table">
+                    <thead>
+                        <tr>
+                            <th>Silver</th>
+                            <th></th>
+                            <th><a href="#"><i class="fa fa-caret-right"></i></a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>16.10<br>Bid</td>
+                            <td>16.50<br>Ask</td>
+                            <td>-.36<br>Change</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="pure-table stretch-table">
+                    <thead>
+                        <tr>
+                            <th>Platinum</th>
+                            <th></th>
+                            <th><a href="#"><i class="fa fa-caret-right"></i></a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1206.10<br>Bid</td>
+                            <td>1207.10<br>Ask</td>
+                            <td>+23.40<br>Change</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="graph" class="pure-u-1 pure-u-md-3-5">
+                GRAPH HERE! graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph 
+            </div>  
+        </div>
+    </div>
+            
+   
+   
+   <!-- script for left menu -->
+   <script>
+       (function (window, document) {
+
+            var layout   = document.getElementById('layout'),
+                menu     = document.getElementById('menu'),
+                menuLink = document.getElementById('menuLink');
+
+            function toggleClass(element, className) {
+                var classes = element.className.split(/\s+/),
+                    length = classes.length,
+                    i = 0;
+
+                for(; i < length; i++) {
+                  if (classes[i] === className) {
+                    classes.splice(i, 1);
+                    break;
+                  }
+                }
+                // The className is not found
+                if (length === classes.length) {
+                    classes.push(className);
+                }
+
+                element.className = classes.join(' ');
+            }
+
+            menuLink.onclick = function (e) {
+                var active = 'active';
+
+                e.preventDefault();
+                toggleClass(layout, active);
+                toggleClass(menu, active);
+                toggleClass(menuLink, active);
+            };
+
+        }(this, this.document));
+    </script>
+    
+    <script>
+  
+
+    function switchVisible(id) {
+            if (document.getElementById(id).style.display == 'block') {
+                document.getElementById(id).style.display = 'none';
+            }
+            else {
+                document.getElementById(id).style.display = 'block';
+            }
+}
+        
+        
+    </script
+    
+ 
+   
+</body>
+
+</html>
