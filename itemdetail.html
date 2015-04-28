@@ -3,153 +3,128 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item Detail</title>
-    <link rel="stylesheet" href="resources/css/all.css">
-
+    <title>MyStackApp</title>
+    <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     
-    <style>
-        @media (max-width: 48em) {
-            #topdesktop {
-                display:none;
-            }
-            #topmobile {
-                display:inline-block;
-            }
-            #itemdetailback {
-                display:none;
-            }
-        }
-        
-        @media (min-width: 48em) {
-            #topdesktop {
-                display:inline-block;
-            }
-            #topmobile {
-                display:none;
-            }
-        }
-       
-        #itemdetail td:first-child {
-            text-align:right;
-        }
-        #itemdetail td:last-child {
-            text-align:left;
-        }
-        
-    </style>
+    
 </head>
 
 <body>
-
-    <!-- show this on desktop/ hide on mobile-->
-    <div id="topdesktop" class="pure-menu pure-menu-horizontal">
-        <a href="#" class="pure-menu-link"><i class="fa fa-refresh"></i></a>
-        <b>MyStackApp</b>
-        <a href="#" class="pure-menu-link"><i class="fa fa-cog"></i></a>
-    </div>
     
-    <!-- show this on mobile/ hide on desktop -->
-    <div id="topmobile" class="pure-menu pure-menu-horizontal">
-        <a href="javascript:history.back()" class="pure-menu-link"><i class="fa fa-caret-left"></i></a>
-        <b>US Eagle</b>
+
+    <!-- the top bar -->
+    <div id="top-bar">
+        <ul>
+            <li><a href="#"><i class="fa fa-refresh"></i></a></li>
+            <li>MyStackApp</li>
+            <li><a href="#"><i class="fa fa-cog"></i></a></li>
+        </ul>
     </div>
-        
+
+    
+    <!-- contains the left menu and the content -->
     <div id="layout">
         
+        
+        <ul id="menu">
+            <li class="pure-menu-item"><a href="home.html" class="pure-menu-link"><i class="fa fa-home"></i><br>Home</a></li>
+            <li class="pure-menu-item"><a href="mygold.html" class="pure-menu-link"><b>Au</b><br>My Gold</a></li>
+            <li class="pure-menu-item"><a href="mysilver.html" class="pure-menu-link"><b>Ag</b><br>My Silver</a></li>
+            <li class="pure-menu-item"><a href="myplatinum.html" class="pure-menu-link"><b>Pt</b><br>My Platinum</a></li>
+        </ul>
 
-    
-        <div id="menu">
-            <div class="pure-menu">
-                <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a href="home.html" class="pure-menu-link"><i class="fa fa-home"></i><br>Home</a></li>
-                    <li class="pure-menu-item"><a href="mygold.html" class="pure-menu-link"><b>Au</b><br>My Gold</a></li>
-                    <li class="pure-menu-item"><a href="mysilver.html" class="pure-menu-link"><b>Ag</b><br>My Silver</a></li>
-                    <li class="pure-menu-item"><a href="myplatinum.html" class="pure-menu-link"><b>Pt</b><br>My Platinum</a></li>
-                </ul>
-            </div>
-        </div>
-    
-    
-        <p id="itemdetailback">
+        
+        <!-- Menu toggle button on small screens -->
+        <a href="#menu" id="menuLink" class="menu-toggle-button">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+        
+        
+        <p>
             <i class="fa fa-caret-left"></i>
             Item Detail
         </p>
-    
-        <div class="pure-g" style="text-align:center;">
-            <div class="pure-u-1 pure-u-md-1-4">
-
-                [bigimageofcoin]
-
+        
+        
+        <div id="content" class="group">
+        
+       
+              
+        
+        
+            <div class="col span_1_of_2">
+                [stackimghere]
+                
             </div>
             
-            <div class="pure-u-1 pure-u-md-2-4">
             
             
-                <table id="itemdetail" class="pure-table">
-                    <tbody>
-                        <tr>
-                            <td>Metal</td>
-                            <td>Gold</td>
-                        </tr>
-                        <tr>
-                            <td>Type</td>
-                            <td>US Eagle</td>
-                        </tr>
-                        <tr>
-                            <td>Purchase Data</td>
-                            <td>04 March 2015</td>
-                        </tr>
-                        <tr>
-                            <td>Qty</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>Premium</td>
-                            <td>47.00</td>
-                        </tr>
-                        <tr>
-                            <td>Unit Price</td>
-                            <td>1250.60</td>
-                        </tr>
-                        <tr>
-                            <td>Gold %</td>
-                            <td>0.999</td>
-                        </tr>
-                        <tr>
-                            <td>Weight/unit (g)</td>
-                            <td>1.244</td>
-                        </tr>
-                        <tr>
-                            <td>Gold g/u</td>
-                            <td>1.244</td>
-                        </tr>
-                        <tr>
-                            <td>Gold ozt/u</td>
-                            <td>0.0400</td>
-                        </tr>
-                        <tr>
-                            <td>Total au (ozt)</td>
-                            <td>0.0400</td>
-                        </tr>
-                        <tr>
-                            <td><b>TOTAL</b></td>
-                            <td>1199.10</td>
-                        </tr>
-                    </tbody>
+            <div class="col span_1_of_2">
+
+                <table class="item-table">
+                    <tr>
+                        <td>Metal</td>
+                        <td>Gold</td>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td>US Eagle</td>
+                    </tr>
+                    <tr>
+                        <td>Purchase Date</td>
+                        <td>04 March 2015</td>
+                    </tr>
+                    <tr>
+                        <td>Qty.</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Premium</td>
+                        <td>47.00</td>
+                    </tr>
+                    <tr>
+                        <td>Unit Price</td>
+                        <td>1250.60</td>
+                    </tr>
+                    <tr>
+                        <td>Gold %</td>
+                        <td>0.999</td>
+                    </tr>
+                    <tr>
+                        <td>Weight/unit (g)</td>
+                        <td>1.244</td>
+                    </tr>
+                    <tr>
+                        <td>Gold g/u</td>
+                        <td>1.244</td>
+                    </tr>
+                    <tr>
+                        <td>Gold ozt/u</td>
+                        <td>0.0400</td>
+                    </tr>
+                    <tr>
+                        <td>Total au (ozt)</td>
+                        <td>0.0400</td>
+                    </tr>
+                    <tr>
+                        <td><b>TOTAL</b></td>
+                        <td>1199.10</td>
+                    </tr>
                 </table>
-          
             </div>
-
-            
+        
         </div>
+        
+        
     </div>
-            
-   
-   
-   <!-- script for left menu -->
-   <script>
+    
+    
+    
+    
+    <script>
        (function (window, document) {
 
             var layout   = document.getElementById('layout'),
@@ -186,8 +161,7 @@
 
         }(this, this.document));
     </script>
- 
-   
-</body>
 
+
+</body>
 </html>

@@ -1,0 +1,256 @@
+/***************************/
+
+
+@media screen and (max-width: 480px) {
+
+    /* hide graph and menu-toggle-button in mobile */
+	#graph,
+    #menuLink {
+        display:none;
+    }
+    
+}
+
+
+
+/****** search bar with magnify glass **********/
+.search-bar form {
+	display: inline;
+    
+}
+
+.search-bar input[type="text"] {
+	border-radius: 10px;
+	border: 1px solid rgba(0,0,0,0.2);
+	padding: 4px 7px;
+    
+    background: white url(../img/search.png) 10px 7px no-repeat;
+    text-indent: 18px;
+}
+
+
+
+
+/******************************* tables *****************************/
+
+/* table for display gold value, current spot, etc. */
+.value-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.value-table th {
+    border-bottom: 1px solid;
+    text-align: left;
+    font-weight: normal;
+}
+.value-table th:last-child{
+    text-align: right;
+}
+
+.value-table td {
+    text-align: center;
+}
+
+/* table for displaying My Stack */
+.stack-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.stack-table th {
+    border-bottom: 1px solid;
+    text-align: left;
+    font-weight: normal;
+}
+
+/* table for item detail and add item */
+.item-table {
+    border-collapse: collapse;
+}
+.item-table tr td:first-child {
+    text-align:right;
+    padding-right:10px;
+}
+.item-table tr td:last-child {
+    text-align:left;
+    
+}
+
+
+/* This is the parent `<div>` that contains the menu and the content area. */
+#layout {
+    position: relative;
+    padding-left: 0;
+}
+#layout.active #menu {
+    left: 150px;
+    width: 150px;
+}
+
+#layout.active .menu-toggle-button {
+    left: 150px;
+}
+
+
+
+/************************* content (the area to the right of the menu) *************************/
+
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.5%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+
+/*  GRID OF TWO  */
+.span_2_of_2 {      /* take up whole */
+	width: 100%;
+}
+.span_1_of_2 {      /* take up half */
+	width: 49.25%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+    
+    .span_2_of_2,
+    .span_1_of_2 { width: 100%; }
+
+}
+
+
+
+/********************************* top bar **************************************************/
+
+
+
+#top-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #eee;
+}
+
+#top-bar li {
+    display: inline;
+}
+#top-bar li:last-child {
+    float: right;
+}
+
+
+/***************************************** left menu ****************************************/
+
+#menu {
+    list-style-type: none;
+    padding: 0;
+    margin-left: -150px; /* "#menu" width */
+    width: 150px;
+    position: fixed;
+    top: 2em;
+    left: 0;
+    bottom: 0;
+    z-index: 1000; /* so the menu or its navicon stays above all content */
+    overflow-y: auto;
+    text-align:center;
+}
+
+
+/******** the menu toggle button that shows/hides the left menu on small screens ***************/
+.menu-toggle-button {
+    display: inline-block; /* show this only on small screens */
+    background: #000;
+    background: rgba(0,0,0,0.7);
+    font-size: 10px; /* change this value to increase/decrease button size */
+    z-index: 10;
+    width: 2em;
+    height: auto;
+    padding: 2em 1.5em;
+}
+
+    .menu-toggle-button:hover,
+    .menu-toggle-button:focus {
+        background: #000;
+    }
+
+    .menu-toggle-button span {
+        position: relative;
+        display: inline-block;
+    }
+
+    .menu-toggle-button span,
+    .menu-toggle-button span:before,
+    .menu-toggle-button span:after {
+        background-color: #fff;
+        width: 100%;
+        height: 0.2em;
+    }
+
+        .menu-toggle-button span:before,
+        .menu-toggle-button span:after {
+            position: absolute;
+            margin-top: -0.6em;
+            content: " ";
+        }
+
+        .menu-toggle-button span:after {
+            margin-top: 0.6em;
+        }
+
+
+/* -- Responsive Styles (Media Queries) ------------------------------------- */
+
+/* Hides the menu at '480px' */
+@media (min-width: 480px) {
+
+    #layout {
+        padding-left: 150px; /* left col width "#menu" */
+        left: 0;
+    }
+    #menu {
+        left: 150px;
+    }
+
+    .menu-toggle-button {
+        position: fixed;
+        left: 150px;
+        display: none;
+    }
+
+    #layout.active .menu-toggle-button {
+        left: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Only apply this when the window is small. Otherwise, the following
+    case results in extra padding on the left:
+        * Make the window small.
+        * Tap the menu to trigger the active state.
+        * Make the window large again.
+    */
+    #layout.active {
+        position: relative;
+        left: 150px;
+    }
+}
+
+/* smooth transition for menu and content area when the menu is going in and out */
+#layout,
+#menu,
+.menu-toggle-button {
+    transition: all 0.2s ease-out;
+}
+
