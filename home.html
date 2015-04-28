@@ -6,26 +6,6 @@
     <title>MyStackApp</title>
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <style>
-        #stack-value {
-            background-color: #eee;
-        }
-        
-        
-        @media (max-width: 480px) {
-            #mystack-caret {
-                display:inline-block;
-                float:right;
-            }
-        }
-        
-        @media (min-width: 480px) {
-            #mystack-caret {
-                display:none;
-            }
-        }
-    </style>
     
     
 </head>
@@ -63,7 +43,7 @@
             <div class="col span_1_of_3">
                 <p id="stack-value">$24,495.23 +3.5%
                 
-                <a href="#"><i id="mystack-caret" class="fa fa-caret-right"></i></a>
+                <a id="mystack-caret" href="mystack-mobile.html"><i class="fa fa-caret-right"></i></a>
                 
                 <br>
                 My Total Stack Value</p>
@@ -129,19 +109,6 @@
     </div>
     
     
-
-
-    <!-- show/hide -->
-    <script>
-        function switchVisible(id) {
-                if (document.getElementById(id).style.display == 'block') {
-                    document.getElementById(id).style.display = 'none';
-                }
-                else {
-                    document.getElementById(id).style.display = 'block';
-                }
-        }
-    </script>
 
 </body>
 </html>

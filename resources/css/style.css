@@ -1,6 +1,11 @@
 /***************************/
 
 
+#stack-value {
+    background-color: #eee;
+}
+
+
 @media screen and (max-width: 480px) {
 
     /* hide graph and menu-toggle-button in mobile */
@@ -10,6 +15,17 @@
         display:none;
     }
     
+    #mystack-caret {
+        display:inline-block;
+        float:right;
+    }
+    
+}
+
+@media (min-width: 480px) {
+    #mystack-caret {
+        display:none;
+    }
 }
 
 
@@ -50,7 +66,7 @@
     
     #current-spot-table,
     #add-bottom-icon,
-    .stack-table tr th:first-child
+    .stack-table tr th:first-child,
     .stack-table tr td:first-child {
         display:none;
     }
@@ -68,6 +84,11 @@
     #back-icon,
     #add-top-icon {
         display:none;
+    }
+    
+    #graph,
+    #metal-tables {
+        display:block;
     }
     
     #weight:after {
