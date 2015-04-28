@@ -17,9 +17,10 @@
     <!-- the top bar -->
     <div id="top-bar">
         <ul>
-            <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-            <li>MyStackApp</li>
-            <li><a href="#"><i class="fa fa-cog"></i></a></li>
+            <li><a id="refresh-icon" href="#"><i class="fa fa-refresh"></i></a>
+            <a id="back-icon" href="javascript:history.back()"><i class="fa fa-arrow-left"></i></a></li>
+            <li><span id="add-item-title" class="topbar-title"></span></li>
+            <li><a id="gear-icon" href="#"><i class="fa fa-cog"></i></a></li>
         </ul>
     </div>
 
@@ -36,14 +37,9 @@
         </ul>
 
         
-        <!-- Menu toggle button on small screens -->
-        <a href="#menu" id="menuLink" class="menu-toggle-button">
-            <!-- Hamburger icon -->
-            <span></span>
-        </a>
+     
         
-        
-        <p>
+        <p id="content-title">
             <i class="fa fa-caret-left"></i>
             Add Item
         </p>
@@ -55,7 +51,7 @@
               
         
         
-            <div class="col span_1_of_2">
+            <div class="col span_1_of_3">
             
                 [stackimghere]
                 
@@ -63,7 +59,7 @@
             
             
             
-            <div class="col span_1_of_2">
+            <div class="col span_1_of_3">
 
                 <table class="item-table">
                     <tr>
@@ -143,47 +139,7 @@
         
     </div>
     
-    
-    
-    
-    <script>
-       (function (window, document) {
-
-            var layout   = document.getElementById('layout'),
-                menu     = document.getElementById('menu'),
-                menuLink = document.getElementById('menuLink');
-
-            function toggleClass(element, className) {
-                var classes = element.className.split(/\s+/),
-                    length = classes.length,
-                    i = 0;
-
-                for(; i < length; i++) {
-                  if (classes[i] === className) {
-                    classes.splice(i, 1);
-                    break;
-                  }
-                }
-                // The className is not found
-                if (length === classes.length) {
-                    classes.push(className);
-                }
-
-                element.className = classes.join(' ');
-            }
-
-            menuLink.onclick = function (e) {
-                var active = 'active';
-
-                e.preventDefault();
-                toggleClass(layout, active);
-                toggleClass(menu, active);
-                toggleClass(menuLink, active);
-            };
-
-        }(this, this.document));
-    </script>
-
+   
 
 </body>
 </html>

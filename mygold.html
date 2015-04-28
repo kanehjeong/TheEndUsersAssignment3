@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     
-    
+
 </head>
 
 <body>
@@ -17,9 +17,11 @@
     <!-- the top bar -->
     <div id="top-bar">
         <ul>
-            <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-            <li>MyStackApp</li>
-            <li><a href="#"><i class="fa fa-cog"></i></a></li>
+            <li><a id="refresh-icon" href="#"><i class="fa fa-refresh"></i></a>
+            <a id="back-icon" href="javascript:history.back()"><i class="fa fa-arrow-left"></i></a></li>
+            <li><span id="gold-title" class="topbar-title"></span></li>
+            <li><a id="gear-icon" href="#"><i class="fa fa-cog"></i></a>
+            <a id="add-top-icon" href="additem.html"><i class="fa fa-plus"></i></a></li>
         </ul>
     </div>
 
@@ -36,17 +38,12 @@
         </ul>
 
         
-        <!-- Menu toggle button on small screens -->
-        <a href="#menu" id="menuLink" class="menu-toggle-button">
-            <!-- Hamburger icon -->
-            <span></span>
-        </a>
-        
+      
         
         <div id="content" class="group">
         
         
-            <div class="col span_1_of_2">
+            <div class="col span_1_of_3">
                 <p>$18,234.10 Daily +3.5% Overall +1.2%
                 <br>
                 My Gold Value</p>
@@ -55,7 +52,7 @@
                 
                 
                 
-                <table class="value-table">
+                <table id="current-spot-table" class="value-table">
                     <tr>
                         <th>Current Spot</th>
                         <th></th>
@@ -68,6 +65,11 @@
                     </tr>
                 </table>
                
+               
+                <div id="bottom-nav-mobile">
+                    <a href="#">[=icon]</a>
+                    <a href="#">[graphicon]</a>
+                </div>
             
                 
                 
@@ -75,27 +77,25 @@
             
             
             
-            <div id="graph" class="col span_1_of_2">
+            <div id="graph" class="col span_2_of_3">
                 graph goes here graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph
             </div>
         
             
            
             
-            <div class="col span_2_of_2">
+            <div class="col span_3_of_3">
             
             
 
-                
+                <p>
+                    My <span id="gold-stack-table-title"> Stack</span>
                     <!-- search bar -->
-                    <form class="search-bar">
-                        My Stack
+                    <input class="search-bar" type="text">
                     
-                        <input type="text" required>
-                        
-                        <a href="additem.html"><i class="fa fa-plus"></i></a>
-                    </form>	
-
+                    <!-- add item (plus sign icon) -->
+                    <a id="add-bottom-icon" href="additem.html"><i class="fa fa-plus"></i></a>
+                </p>
                 
             
                 <table class="stack-table">
@@ -103,30 +103,30 @@
                         <th>Image</th>
                         <th>Item</th>
                         <th>Qty.</th>
-                        <th>Weight/unit (g)</th>
-                        <th>% au</th>
+                        <th><span id="weight">Weight</span></th>
+                        <th><span id="au">%</span></th>
                         <th>Value</th>
                     </tr>
-                    <tr>
-                        <td><a href="itemdetail.html">[img]</a></td>
+                    <tr onclick="window.document.location='itemdetail.html';">
+                        <td>[img]</td>
                         <td>US Eagle</td>
                         <td>1</td>
                         <td>1.244</td>
                         <td>.917</td>
                         <td>1199.10</td>
                     </tr>
-                    <tr>
-                        <td><a href="itemdetail.html">[img]</a></td>
+                    <tr onclick="window.document.location='itemdetail.html';">
+                        <td>[img]</td>
                         <td>US Eagle</td>
-                        <td>1</td>
+                        <td>5</td>
                         <td>1.244</td>
                         <td>.917</td>
                         <td>1199.10</td>
                     </tr>
-                    <tr>
-                        <td><a href="itemdetail.html">[img]</a></td>
+                    <tr onclick="window.document.location='itemdetail.html';">
+                        <td>[img]</td>
                         <td>US Eagle</td>
-                        <td>1</td>
+                        <td>5</td>
                         <td>1.244</td>
                         <td>.917</td>
                         <td>1199.10</td>
@@ -142,45 +142,6 @@
     
     
     
-    
-    <script>
-       (function (window, document) {
-
-            var layout   = document.getElementById('layout'),
-                menu     = document.getElementById('menu'),
-                menuLink = document.getElementById('menuLink');
-
-            function toggleClass(element, className) {
-                var classes = element.className.split(/\s+/),
-                    length = classes.length,
-                    i = 0;
-
-                for(; i < length; i++) {
-                  if (classes[i] === className) {
-                    classes.splice(i, 1);
-                    break;
-                  }
-                }
-                // The className is not found
-                if (length === classes.length) {
-                    classes.push(className);
-                }
-
-                element.className = classes.join(' ');
-            }
-
-            menuLink.onclick = function (e) {
-                var active = 'active';
-
-                e.preventDefault();
-                toggleClass(layout, active);
-                toggleClass(menu, active);
-                toggleClass(menuLink, active);
-            };
-
-        }(this, this.document));
-    </script>
-
-
+  
 </body>
 </html>

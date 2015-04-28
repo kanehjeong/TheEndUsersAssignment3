@@ -4,22 +4,90 @@
 @media screen and (max-width: 480px) {
 
     /* hide graph and menu-toggle-button in mobile */
-	#graph,
-    #menuLink {
+    #refresh-icon,
+    #gear-icon,
+	#graph {
         display:none;
     }
     
 }
 
 
+/* add item and item detail pages differences on mobile/desktop*/
+@media (max-width: 480px) {
 
-/****** search bar with magnify glass **********/
-.search-bar form {
-	display: inline;
+    #add-item-title:after {
+        content:"Add Item";
+    }
+    
+    #item-detail-title:after{
+        content:"US Eagle";
+    }
+
+    #content-title {
+        display:none;
+    }
+}
+
+@media (min-width: 480px) {
+
+    .topbar-title:after {
+        content:'MyStackApp';
+    }
     
 }
 
-.search-bar input[type="text"] {
+/* Gold/Silver/Platinum pages differences on mobile/desktop*/
+@media (max-width: 480px) {
+    #gold-stack-table-title:before,
+    #gold-title:after {
+        content:'Gold';
+    }
+    
+    .search-bar {
+        display:none;
+    }
+    
+    #current-spot-table,
+    #add-bottom-icon,
+    .stack-table tr th:first-child
+    .stack-table tr td:first-child {
+        display:none;
+    }
+
+    
+}
+
+@media (min-width: 480px) {
+
+    .topbar-title:after {
+        content:'MyStackApp';
+    }
+    
+    #bottom-nav-mobile,
+    #back-icon,
+    #add-top-icon {
+        display:none;
+    }
+    
+    #weight:after {
+        content: "/unit (g)";
+    }
+    #au:after {
+        content: " au";
+    }
+}
+
+/* the = and graph nav in mobile version*/
+#bottom-nav-mobile {
+    background-color: #eee;
+    text-align:center;
+}
+
+/****** search bar with magnify glass **********/
+
+
+.search-bar {
 	border-radius: 10px;
 	border: 1px solid rgba(0,0,0,0.2);
 	padding: 4px 7px;
@@ -109,13 +177,10 @@
 .group:after { content:""; display:table; }
 .group:after { clear:both;}
 
-/*  GRID OF TWO  */
-.span_2_of_2 {      /* take up whole */
-	width: 100%;
-}
-.span_1_of_2 {      /* take up half */
-	width: 49.25%;
-}
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.16%; }
+.span_1_of_3 { width: 32.33%; }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
@@ -124,8 +189,7 @@
 		margin: 1% 0 1% 0%;
 	}
     
-    .span_2_of_2,
-    .span_1_of_2 { width: 100%; }
+    .span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
 
 }
 
@@ -167,49 +231,6 @@
     text-align:center;
 }
 
-
-/******** the menu toggle button that shows/hides the left menu on small screens ***************/
-.menu-toggle-button {
-    display: inline-block; /* show this only on small screens */
-    background: #000;
-    background: rgba(0,0,0,0.7);
-    font-size: 10px; /* change this value to increase/decrease button size */
-    z-index: 10;
-    width: 2em;
-    height: auto;
-    padding: 2em 1.5em;
-}
-
-    .menu-toggle-button:hover,
-    .menu-toggle-button:focus {
-        background: #000;
-    }
-
-    .menu-toggle-button span {
-        position: relative;
-        display: inline-block;
-    }
-
-    .menu-toggle-button span,
-    .menu-toggle-button span:before,
-    .menu-toggle-button span:after {
-        background-color: #fff;
-        width: 100%;
-        height: 0.2em;
-    }
-
-        .menu-toggle-button span:before,
-        .menu-toggle-button span:after {
-            position: absolute;
-            margin-top: -0.6em;
-            content: " ";
-        }
-
-        .menu-toggle-button span:after {
-            margin-top: 0.6em;
-        }
-
-
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
 /* Hides the menu at '480px' */
@@ -223,22 +244,12 @@
         left: 150px;
     }
 
-    .menu-toggle-button {
-        position: fixed;
-        left: 150px;
-        display: none;
-    }
-
-    #layout.active .menu-toggle-button {
-        left: 150px;
-    }
 }
 
 @media (max-width: 480px) {
     /* Only apply this when the window is small. Otherwise, the following
     case results in extra padding on the left:
         * Make the window small.
-        * Tap the menu to trigger the active state.
         * Make the window large again.
     */
     #layout.active {
@@ -249,8 +260,8 @@
 
 /* smooth transition for menu and content area when the menu is going in and out */
 #layout,
-#menu,
-.menu-toggle-button {
+#menu
+{
     transition: all 0.2s ease-out;
 }
 
