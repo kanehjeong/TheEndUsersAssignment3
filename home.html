@@ -4,111 +4,114 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyStackApp</title>
+    <link rel="stylesheet" href="resources/css/bootstrap.css">
     <link rel="stylesheet" href="resources/css/style.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     
     
 </head>
 
 <body>
     
+    <div class="container-fluid">
 
-    <!-- the top bar -->
-    <div id="top-bar">
-        <ul>
-            <li><a href="#"><i class="fa fa-refresh"></i></a></li>
-            <li>MyStackApp</li>
-            <li><a href="#"><i class="fa fa-cog"></i></a></li>
-        </ul>
-    </div>
-
-    
-    <!-- contains the left menu and the content -->
-    <div id="layout">
-        
-        
-        <ul id="menu">
-            <li class="pure-menu-item"><a href="home.html" class="pure-menu-link"><i class="fa fa-home"></i><br>Home</a></li>
-            <li class="pure-menu-item"><a href="mygold.html" class="pure-menu-link"><b>Au</b><br>My Gold</a></li>
-            <li class="pure-menu-item"><a href="mysilver.html" class="pure-menu-link"><b>Ag</b><br>My Silver</a></li>
-            <li class="pure-menu-item"><a href="myplatinum.html" class="pure-menu-link"><b>Pt</b><br>My Platinum</a></li>
-        </ul>
-
+        <!-- the top bar -->
+        <div id="top-bar">
+            <ul>
+                <li><a href="#"><i class="glyphicon glyphicon-refresh"></i></a></li>
+                <li>MyStackApp</li>
+                <li><a href="#"><i class="glyphicon glyphicon-cog"></i></a></li>
+            </ul>
+        </div>
 
         
-        
-        <div id="content" class="group">
-        
-        
-            <div class="col span_1_of_3">
-                <p id="stack-value">$24,495.23 +3.5%
+        <!-- contains the left menu and the content -->
+        <div id="layout">
+            
+            
+            <ul id="menu">
+                <li class="pure-menu-item"><a href="home.html" class="pure-menu-link"><i class="glyphicon glyphicon-home"></i><br>Home</a></li>
+                <li class="pure-menu-item"><a href="mygold.html" class="pure-menu-link"><b>Au</b><br>My Gold</a></li>
+                <li class="pure-menu-item"><a href="mysilver.html" class="pure-menu-link"><b>Ag</b><br>My Silver</a></li>
+                <li class="pure-menu-item"><a href="myplatinum.html" class="pure-menu-link"><b>Pt</b><br>My Platinum</a></li>
+                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link"><i class="glyphicon glyphicon-off"></i><br>Logout</a></li>
+            </ul>
+
+
+            
+            
+            <div id="content" class="group">
+            
+            
+                <div class="col span_1_of_3">
+                    <p id="stack-value">$24,495.23 +3.5%
+                    
+                    <a id="mystack-caret" href="mystack-mobile.html"><i class="fa fa-caret-right"></i></a>
+                    
+                    <br>
+                    My Total Stack Value</p>
+                    
+                    
+                    <p>Market is open closes in 3h 35min</p>
+                    
+                    
+                    
+                    <table class="value-table">
+                        <tr>
+                            <th>Gold</th>
+                            <th></th>
+                            <th><a href="mygold.html"><i class="fa fa-caret-right"></i></a></th>
+                        </tr>
+                        <tr>
+                            <td>1206.10<br>Bid</td>
+                            <td>1207.10<br>Ask</td>
+                            <td>+23.40<br>Change</td>
+                        </tr>
+                    </table>
+                    
+                    <table class="value-table">
+                        <tr>
+                            <th>Silver</th>
+                            <th></th>
+                            <th><a href="mysilver.html"><i class="fa fa-caret-right"></i></a></th>
+                        </tr>
+                        <tr>
+                            <td>16.10<br>Bid</td>
+                            <td>16.50<br>Ask</td>
+                            <td>-.36<br>Change</td>
+                        </tr>
+                    </table>
+                    
+                    
+                    <table class="value-table">
+                        <tr>
+                            <th>Platinum</th>
+                            <th></th>
+                            <th><a href="myplatinum.html"><i class="fa fa-caret-right"></i></a></th>
+                        </tr>
+                        <tr>
+                            <td>1206.10<br>Bid</td>
+                            <td>1207.10<br>Ask</td>
+                            <td>+23.40<br>Change</td>
+                        </tr>
+                    </table>
+                    
+                    
+                    
+                </div>
                 
-                <a id="mystack-caret" href="mystack-mobile.html"><i class="fa fa-caret-right"></i></a>
-                
-                <br>
-                My Total Stack Value</p>
                 
                 
-                <p>Market is open closes in 3h 35min</p>
-                
-                
-                
-                <table class="value-table">
-                    <tr>
-                        <th>Gold</th>
-                        <th></th>
-                        <th><a href="mygold.html"><i class="fa fa-caret-right"></i></a></th>
-                    </tr>
-                    <tr>
-                        <td>1206.10<br>Bid</td>
-                        <td>1207.10<br>Ask</td>
-                        <td>+23.40<br>Change</td>
-                    </tr>
-                </table>
-                
-                <table class="value-table">
-                    <tr>
-                        <th>Silver</th>
-                        <th></th>
-                        <th><a href="mysilver.html"><i class="fa fa-caret-right"></i></a></th>
-                    </tr>
-                    <tr>
-                        <td>16.10<br>Bid</td>
-                        <td>16.50<br>Ask</td>
-                        <td>-.36<br>Change</td>
-                    </tr>
-                </table>
-                
-                
-                <table class="value-table">
-                    <tr>
-                        <th>Platinum</th>
-                        <th></th>
-                        <th><a href="myplatinum.html"><i class="fa fa-caret-right"></i></a></th>
-                    </tr>
-                    <tr>
-                        <td>1206.10<br>Bid</td>
-                        <td>1207.10<br>Ask</td>
-                        <td>+23.40<br>Change</td>
-                    </tr>
-                </table>
-                
-                
-                
+                <div id="graph" class="col span_2_of_3">
+                    graph goes here graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph
+                </div>
+            
             </div>
             
             
-            
-            <div id="graph" class="col span_2_of_3">
-                graph goes here graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph graph
-            </div>
-        
         </div>
         
         
     </div>
-    
-    
 
 </body>
 </html>

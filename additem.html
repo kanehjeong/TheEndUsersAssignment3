@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyStackApp</title>
+    <link rel="stylesheet" href="resources/css/bootstrap.css">
     <link rel="stylesheet" href="resources/css/style.css">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     
     
@@ -17,10 +17,9 @@
     <!-- the top bar -->
     <div id="top-bar">
         <ul>
-            <li><a id="refresh-icon" href="#"><i class="fa fa-refresh"></i></a>
-            <a id="back-icon" href="javascript:history.back()"><i class="fa fa-arrow-left"></i></a></li>
+            <li><a id="refresh-icon" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
             <li><span id="add-item-title" class="topbar-title"></span></li>
-            <li><a id="gear-icon" href="#"><i class="fa fa-cog"></i></a></li>
+            <li><a id="gear-icon" href="#"><i class="glyphicon glyphicon-cog"></i></a></li>
         </ul>
     </div>
 
@@ -30,10 +29,11 @@
         
         
         <ul id="menu">
-            <li class="pure-menu-item"><a href="home.html" class="pure-menu-link"><i class="fa fa-home"></i><br>Home</a></li>
+            <li class="pure-menu-item"><a href="home.html" class="pure-menu-link"><i class="glyphicon glyphicon-home"></i><br>Home</a></li>
             <li class="pure-menu-item"><a href="mygold.html" class="pure-menu-link"><b>Au</b><br>My Gold</a></li>
             <li class="pure-menu-item"><a href="mysilver.html" class="pure-menu-link"><b>Ag</b><br>My Silver</a></li>
             <li class="pure-menu-item"><a href="myplatinum.html" class="pure-menu-link"><b>Pt</b><br>My Platinum</a></li>
+            <li class="pure-menu-item"><a href="index.html" class="pure-menu-link"><i class="glyphicon glyphicon-off"></i><br>Logout</a></li>
         </ul>
 
         
@@ -130,7 +130,7 @@
                     </tr>
                 </table>
                 
-                Cancel <button type="button">Save to My Stack</button>
+                <a href="home.html">Cancel</a> <button type="button">Save to My Stack</button>
                 
             </div>
         

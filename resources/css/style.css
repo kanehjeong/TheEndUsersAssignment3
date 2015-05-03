@@ -286,3 +286,6 @@
     transition: all 0.2s ease-out;
 }
 
+.clickable-rows tr.clickable:hover {
+    background-color: #ccc;
+}
