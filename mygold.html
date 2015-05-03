@@ -19,6 +19,7 @@
         <div id="top-bar">
             <ul>
                 <li><a id="refresh-icon" href="#"><i class="glyphicon glyphicon-refresh"></i></a>
+                <a id="back-icon" href="javascript:history.back()"><i class="glyphicon glyphicon-arrow-left"></i></a></li>
                 <li><span id="gold-title" class="topbar-title"></span></li>
                 <li><a id="gear-icon" href="#"><i class="glyphicon glyphicon-cog"></i></a>
                 <a id="add-top-icon" href="additem.html"><i class="glyphicon glyphicon-plus"></i></a></li>
@@ -63,8 +64,8 @@
                    
                    
                     <div id="bottom-nav-mobile">
-                        <a id="hamburger-icon" onclick="select('hamburger');" href="#">[=icon]</a>
-                        <a id="graph-icon" onclick="select('graph');" href="#">[graphicon]</a>
+                        <a id="hamburger-icon" onclick="select('hamburger');" href="#"><span class="glyphicon glyphicon-menu-hamburger"></span></a>
+                        <a id="graph-icon" onclick="select('graph');" href="#"><span class="glyphicon glyphicon-picture"></span></a>
                     </div>
                 
                     
@@ -74,7 +75,7 @@
                 
                 
                 <div id="graph" class="col span_2_of_3">
-                    <img src="resources/img/gold_graph.gif" alt="gold graph">
+                    <img class="img-responsive" src="resources/img/gold_graph.gif" alt="gold graph">
                 </div>
             
 
